@@ -91,6 +91,9 @@ public class ProductsController {
 	
 	@PutMapping("/update-products")
 	public Object updateProducts(@RequestBody Products products) {
+		
+		logger.info("products details:="+products.toString());
+		
 		return productsService.updateProducts(products);
 	}
 	
