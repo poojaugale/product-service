@@ -39,6 +39,9 @@ public class ProductsController {
 	
 	@PostMapping("/add-products")
 	public Object addProducts(@RequestBody Products products) {
+		
+		logger.info(products.toString());
+		
 		return productsService.addProducts(products);	
 	}
 	
